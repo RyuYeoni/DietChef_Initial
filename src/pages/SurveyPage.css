@@ -1,0 +1,131 @@
+/* src/pages/SurveyPage.css */
+/* 사용자 가입시 설문조사 페이지 스타일 */
+
+/* 설문 페이지 전체 컨테이너 */
+.survey-page-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 0rem;  /* 위쪽 간격을 더 많이 주어 콘텐츠가 더 위로 배치됨 */
+  margin-top: -5vh;   /* 위쪽 여백을 줄여서 페이지가 더 위로 올려짐 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 페이지 제목 */
+h2 {
+  margin-bottom: 1rem;  /* 'Welcome!'과 문구 간격을 줄임 */
+  font-size: 2.5rem;    /* 'Welcome!' 크기 유지 */
+  text-align: center;   /* 중앙 정렬 */
+}
+
+/* h2 + p: 문구 ("We have a question for you.") */
+h2 + p {  
+  font-size: 1.5rem;    /* 'We have a question for you.' 크기 작게 */
+  text-align: center;   /* 중앙 정렬 */
+  color: #555;          /* 글자 색을 약간 어두운 회색으로 설정 */
+  margin-top: 0;        /* 위쪽 간격 없앰 */
+}
+
+/* 각 항목들을 담는 레이아웃 */
+.row, .full-width {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;   /* 항목 간의 아래쪽 여백 */
+}
+
+/* .row: 항목들 (일반적인 항목들) */
+.row {
+  margin-left: 6rem;  /* 항목들을 더 오른쪽으로 이동 */
+}
+
+/* .full-width: 목표 및 운동시간을 포함한 넓은 영역 */
+.full-width {
+  margin-left: 6rem;  /* 목표 및 운동시간 영역도 더 오른쪽으로 이동 */
+}
+
+/* .column: 입력 필드들을 포함하는 열 */
+.column {
+  flex: 1;             /* 열을 균등하게 나누기 */
+  margin-right: 1rem;  /* 오른쪽 여백 추가 */
+}
+
+/* 마지막 열의 오른쪽 여백 제거 */
+.column:last-child {
+  margin-right: 0;     /* 마지막 열은 오른쪽 여백 제거 */
+}
+
+/* 레이블 텍스트 */
+label {
+  display: inline-block;
+  width: 250px;        /* 레이블의 너비 설정 */
+  margin-bottom: 0.3rem; /* 레이블과 입력란 간의 간격 설정 */
+}
+
+/* input[type="text"], input[type="number"], input[type="date"], select: 입력 필드들 */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid #ccc;   /* 하단에만 테두리 추가 */
+  padding: 0.4rem 0.2rem;  /* 입력란 내부 여백 */
+  background-color: transparent;  /* 배경을 투명으로 설정 */
+}
+
+/* 더 넓은 영역에 적용된 레이블 */
+.full-width label {
+  width: 340px;   /* 기존 360px → 더 짧게 설정 */
+  margin-right: 1.1rem;  /* 오른쪽 마진을 조금 더 넓게 설정 */
+}
+
+/* 더 넓은 영역의 입력 필드 */
+.full-width select,
+.full-width input {
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  padding: 0.4rem 0.2rem;
+}
+
+/* 계속 진행 버튼 */
+.continue-button {
+  background-color: #F9A826; /* 버튼 배경색 설정 */
+  color: white;  /* 버튼 텍스트 색을 흰색으로 설정 */
+  border: none;
+  border-radius: 999px;  /* 버튼을 둥글게 처리 */
+  padding: 12px 30px;    /* 버튼 안의 텍스트 간격 설정 */
+  font-size: 16px;        /* 버튼 텍스트 크기 */
+  cursor: pointer;       /* 버튼 클릭 시 커서 모양 변경 */
+  transition: background-color 0.3s ease;  /* 배경색 변화에 부드러운 전환 효과 추가 */
+  width: 200px;           /* 버튼 너비 */
+  margin-top: 2rem;       /* 버튼과 입력칸 사이 간격을 더 넓힘 */
+}
+
+/* 계속 진행 버튼에 마우스를 올렸을 때 */
+.continue-button:hover {
+  background-color: #e08d1c;  /* 마우스를 올렸을 때 버튼 색상 변경 */
+}
+
+/* 계속 진행 버튼이 포커스를 받을 때 */
+.continue-button:focus {
+  outline: none;   /* 포커스 시 테두리 제거 */
+}
+
+/* 프로필로 돌아가는 링크 */
+.back-link {
+  color: #888;        /* 텍스트 색을 연한 회색으로 설정 */
+  font-size: 14px;     /* 텍스트 크기 설정 */
+  text-align: center;  /* 중앙 정렬 */
+  margin: 0.5rem auto 2rem;  /* 링크 상하 여백 설정 */
+  cursor: pointer;    /* 클릭 가능한 영역으로 커서 변경 */
+  text-decoration: underline;  /* 밑줄 추가 */
+}
+
+/* 프로필로 돌아가는 링크에 마우스를 올렸을 때 */
+.back-link:hover {
+  color: #555;        /* 마우스를 올렸을 때 색상 변경 */
+}

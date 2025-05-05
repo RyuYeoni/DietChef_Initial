@@ -1,0 +1,71 @@
+/* src/components/HeroSlider.css */
+/* 웹사이트 상단 히어로 섹션 스타일 정의 */
+
+.hero {
+  display: flex; /* 좌우로 배치되는 두 섹션을 위한 flexbox 사용 */
+  height: 100%; /* 부모 요소의 높이를 100%로 설정 */
+}
+
+.hero-left {
+  width: 60%; /* 화면의 60%를 차지하는 왼쪽 섹션 */
+  position: relative; /* 내부 요소들에 대한 위치 설정 */
+  overflow: hidden; /* 영역을 벗어난 부분은 숨김 처리 */
+}
+
+.hero-left img {
+  width: 100%; /* 이미지가 왼쪽 영역의 100% 너비에 맞도록 설정 */
+  height: auto; /* 이미지의 비율을 유지하면서 높이는 자동 조정 */
+  object-fit: cover; /* 이미지를 영역에 맞게 잘라서 채우도록 설정 */
+}
+
+.dots {
+  position: absolute; /* 인디케이터를 화면 하단에 고정 */
+  bottom: 10px; /* 아래쪽에서 10px 떨어지게 위치 */
+  width: 100%; /* 전체 너비 */
+  text-align: center; /* 인디케이터를 중앙 정렬 */
+}
+
+.dot {
+  display: inline-block; /* 인디케이터를 가로로 배치 */
+  width: 12px; /* 각 인디케이터의 너비 */
+  height: 12px; /* 각 인디케이터의 높이 */
+  margin: 0 8px; /* 인디케이터들 사이의 간격 */
+  background-color: #DEDEDE; /* 기본 회색 배경 */
+  border-radius: 50%; /* 원 모양으로 표시 */
+}
+
+.dot.active { /* 선택된 인디케이터 스타일 */
+  background-color: #F9A826; /* 활성화된 인디케이터의 색상 */
+}
+
+.hero-right {
+  width: 40%; /* 화면의 40%를 차지하는 오른쪽 섹션 */
+  padding: 3rem; /* 내부 여백 */
+  display: flex; /* 내부 요소들을 세로로 배치 */
+  flex-direction: column; /* 세로 방향으로 배치 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.hero-right h1 { /* 큰 제목 스타일 */
+  font-size: 3.5rem; /* 큰 글씨 크기 */
+  font-weight: bold; /* 볼드체 */
+  margin-bottom: 1rem; /* 아래쪽에 여백 추가 */
+}
+
+.hero-right p { /* 작은 문구 스타일 */
+  font-size: 1.1rem; /* 글씨 크기 설정 */
+  margin-bottom: 2rem; /* 아래쪽에 여백 추가 */
+}
+
+.cta-button { /* 시작 버튼 스타일 */
+  background-color: #F9A826; /* 버튼 배경 색상 */
+  color: white; /* 버튼 글씨 색상 */
+  border: none; /* 테두리 없음 */
+  border-radius: 20px; /* 둥근 모서리 */
+  padding: 0.75rem 2rem; /* 버튼 안쪽 여백 설정 */
+  font-size: 1rem; /* 글씨 크기 설정 */
+  cursor: pointer; /* 마우스 올리면 클릭 가능하게 포인터 표시 */
+  width: auto; /* 버튼의 너비는 자동으로 조정 */
+}

@@ -1,0 +1,78 @@
+/* src/components/NoAccountModal.css */
+/* 계정이 없음(비회원이 로그인 눌렀을시) 모달에 대한 전체 스타일을 정의한 CSS 파일 */
+
+
+/* 모달 전체를 덮는 반투명한 배경 레이어 */
+.modal-overlay {
+  position: fixed; /* 화면에 고정되어 스크롤해도 위치 유지 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 전체 화면 너비 */
+  height: 100%; /* 전체 화면 높이 */
+  background: rgba(255, 255, 255, 0.744); /* 반투명 흰색 배경 */
+  display: flex; /* 내부 요소 중앙 정렬을 위해 flex 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  z-index: 1000; /* 다른 요소들보다 앞에 보이게 설정 */
+}
+
+/* 모달 창 자체의 스타일 */
+.modal-content {
+  width: 40%; /* 화면 너비의 40% */
+  height: 85%; /* 화면 높이의 85% */
+  background: white; /* 배경색 흰색 */
+  border-radius: 12px; /* 둥근 모서리 */
+  padding: 2rem; /* 내부 여백 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+  display: flex; /* 내부 콘텐츠 정렬을 위해 flex 사용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: flex-start; /* 상단부터 콘텐츠 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  position: relative; /* 내부 요소 위치 조정 가능하게 설정 */
+}
+
+/* "Join DietChef." 텍스트 스타일 */
+h2 {
+  font-size: 0.5rem; /* 텍스트 크기 (상황에 따라 너무 작을 수도 있음) */
+  margin-bottom: 1.5rem; /* 아래 여백 */
+  margin-top: 23%; /* 위 여백: 화면 가운데쯤에 위치시키려는 의도 */
+  text-align: center; /* 가운데 정렬 */
+  font-weight: 400; /* 보통 굵기 */
+}
+
+/* 구글 로그인 버튼 스타일 */
+.google-button {
+  background-color: white; /* 배경 흰색 */
+  border: 1px solid black; /* 검은색 테두리 */
+  padding: 0.75rem 1.5rem; /* 위아래 0.75rem, 좌우 1.5rem 여백 */
+  font-size: 1rem; /* 글씨 크기 */
+  margin: 2rem 0; /* 위아래 여백 */
+  cursor: pointer; /* 마우스 오버 시 손가락 모양 */
+  color: black; /* 글씨 색상 */
+  display: flex; /* 아이콘과 텍스트를 나란히 정렬하기 위해 flex 사용 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: flex-start; /* 아이콘을 왼쪽에 정렬 */
+  border-radius: 50px; /* 완전히 둥근 형태의 버튼 */
+  width: 60%; /* 버튼 너비: 모달 너비의 60% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 올라온 듯한 그림자 */
+}
+
+/* 구글 아이콘 이미지 스타일 */
+.google-button img {
+  width: 20px; /* 아이콘 크기 */
+  margin-right: 10px; /* 아이콘과 텍스트 사이 여백 */
+}
+
+/* "Already have an account?" 문구 스타일 */
+.signin-text {
+  font-size: 0.9rem; /* 비교적 작은 글씨 */
+  color: #666; /* 회색 글씨 */
+  margin-top: 1rem; /* 위쪽 여백 */
+}
+
+/* "Sign in" 텍스트 스타일 (클릭 가능) */
+.signin-link {
+  color: #F9A826; /* 주황색 (#F9A826) */
+  cursor: pointer; /* 마우스 오버 시 손가락 모양 */
+  text-decoration: underline; /* 밑줄 추가 */
+}

@@ -1,0 +1,96 @@
+/* src/components/SignInModal.css */
+/* 로그인(Sign In) 모달의 스타일 정의 */
+
+/* 전체 화면을 덮는 모달 배경 오버레이 */
+.modal-overlay {
+  position: fixed; /* 브라우저 스크롤에 상관없이 항상 같은 위치에 고정 */
+  top: 0; /* 화면 상단부터 시작 */
+  left: 0; /* 화면 왼쪽부터 시작 */
+  width: 100%; /* 화면 너비 전체 */
+  height: 100%; /* 화면 높이 전체 */
+  background: rgba(255, 255, 255, 0.744); /* 약간 투명한 흰색 배경 (뒤 배경이 흐릿하게 보임) */
+  display: flex; /* 내부 요소를 정렬하기 위해 Flexbox 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  z-index: 1000; /* 다른 모든 요소들 위에 모달을 표시하기 위한 높은 값 */
+}
+
+/* 모달 박스의 실제 콘텐츠 영역 */
+.modal-content {
+  width: 40%; /* 브라우저 너비의 40% */
+  height: 85%; /* 브라우저 높이의 85% */
+  background: white; /* 배경색 흰색 */
+  border-radius: 12px; /* 모서리를 둥글게 */
+  padding: 2rem; /* 내부 여백 설정 (상하좌우 2rem) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 그림자 효과로 떠 있는 느낌 부여 */
+  display: flex; /* Flexbox로 내부 구성 */
+  flex-direction: column; /* 세로 방향으로 요소를 쌓음 */
+  justify-content: flex-start; /* 위쪽부터 요소 정렬 */
+  align-items: center; /* 가로 방향으로 가운데 정렬 */
+  position: relative; /* 내부 요소(.close-button 등)의 위치 지정을 위해 relative 사용 */
+}
+
+/* 모달 안의 제목 ("Welcome back") */
+h2 {
+  font-size: 2rem; /* 글씨 크기를 크게 설정 */
+  margin-bottom: 1.5rem; /* 아래쪽 여백 */
+  margin-top: 23%; /* 모달 상단과의 간격을 넉넉히 설정하여 중앙보다 아래에 위치 */
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  font-weight: 400; /* 글씨 두께를 보통보다 얇게 설정 (Light 느낌) */
+}
+
+/* Google 로그인 버튼 */
+.google-button {
+  background-color: white; /* 버튼 배경색 흰색 */
+  border: 1px solid black; /* 테두리: 검은색 실선 */
+  padding: 0.75rem 1.5rem; /* 위아래 0.75rem, 좌우 1.5rem 여백 */
+  font-size: 1rem; /* 기본 크기 텍스트 */
+  margin: 2rem 0; /* 위아래 마진 2rem, 좌우 없음 */
+  cursor: pointer; /* 마우스를 올리면 손가락 모양으로 변경 */
+  color: black; /* 텍스트 색상은 검정색 */
+  display: flex; /* 내부 요소 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: flex-start; /* 로고는 왼쪽에 위치, 텍스트는 그 옆에 위치 */
+  border-radius: 50px; /* 버튼 모서리를 둥글게 만들어 원통형 느낌 */
+  width: 60%; /* 버튼 너비를 모달 기준 60%로 설정 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약한 그림자 효과 추가 */
+}
+
+/* 구글 버튼 내의 로고 이미지 */
+.google-button img {
+  width: 20px; /* 구글 로고 너비 */
+  margin-right: 10px; /* 로고와 텍스트 사이에 간격 주기 */
+}
+
+/* 구글 버튼 내 텍스트 */
+.google-button span {
+  font-weight: normal; /* 일반적인 텍스트 굵기 */
+  display: inline-block; /* 인라인 요소지만 너비와 높이를 가질 수 있게 설정 */
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  width: 100%; /* 텍스트가 가운데 정렬되도록 전체 너비 사용 */
+}
+
+/* "이미 계정이 있으신가요?" 문구 스타일 */
+.signin-text {
+  font-size: 0.9rem; /* 기본 텍스트보다 약간 작은 크기 */
+  color: #666; /* 회색 계열 텍스트 */
+  margin-top: 1rem; /* 위쪽 여백 */
+}
+
+/* "Sign in" 링크 스타일 */
+.signin-link {
+  color: #F9A826; /* 주황색 강조 색상 (카로트 오렌지) */
+  cursor: pointer; /* 클릭 가능한 링크처럼 보이도록 커서 변경 */
+}
+
+/* 모달 오른쪽 상단의 닫기 버튼 스타일 */
+.close-button {
+  position: absolute; /* 모달 상단 우측에 정확하게 위치시키기 위해 절대 위치 지정 */
+  top: 1rem; /* 위에서 1rem 떨어짐 */
+  right: 1rem; /* 오른쪽에서 1rem 떨어짐 */
+  background: transparent; /* 배경 없음 */
+  border: none; /* 테두리 없음 */
+  font-size: 2rem; /* 큰 X 아이콘 */
+  color: rgb(179, 179, 179); /* 밝은 회색 X */
+  cursor: pointer; /* 마우스를 올렸을 때 손가락 커서 표시 */
+}

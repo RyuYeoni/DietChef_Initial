@@ -1,0 +1,27 @@
+/* src/pages/DietPage.css */
+/* 식단 추전 기능 페이지 스타일, 로그인하면 가장 먼저 보이는 화면 */
+
+/* Diet 페이지의 메인 컨테이너 */
+.diet-page-container {
+  display: flex;                /* flexbox 레이아웃 사용 */
+  flex-direction: column;       /* 자식 요소들을 세로로 배치 */
+  min-height: 100vh;            /* 페이지가 최소한 전체 화면 높이를 차지하도록 설정 */
+}
+
+/* Diet 페이지의 콘텐츠 영역 */
+.diet-page-content {
+  flex: 1;                      /* 콘텐츠가 남은 공간을 차지하도록 설정 */
+  padding: 2rem;                /* 콘텐츠 주변에 여백 추가 */
+  display: flex;                /* 콘텐츠 내부에서 flexbox 사용 */
+  flex-direction: column;       /* 자식 요소들을 세로로 배치 */
+  align-items: center;          /* 콘텐츠를 수평으로 가운데 정렬 */
+  justify-content: center;      /* 콘텐츠를 수직으로 가운데 정렬 */
+  margin-top: 15vh;              /* 헤더 높이를 고려한 상단 여백 추가 */
+}
+
+/* Diet 페이지의 제목 스타일 */
+.diet-page-content h1 {
+  margin-bottom: 2rem;           /* 제목 아래에 여백 추가 */
+  font-size: 2rem;               /* 글씨 크기 설정 */
+  color: #333;                   /* 텍스트 색상은 어두운 회색 */
+}

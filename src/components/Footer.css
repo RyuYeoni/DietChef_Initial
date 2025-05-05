@@ -1,0 +1,7 @@
+/* src/components/Footer.css */
+/* 페이지 하단의 푸터 영역 스타일 */
+
+.footer {
+  height: 5vh; /* 화면 높이의 5%만큼 높이 설정 (viewport height 기준) */
+  border-top: 1px solid #CDC2B2; /* 위쪽에 1픽셀 실선 테두리 추가 (연한 베이지색) */
+}
